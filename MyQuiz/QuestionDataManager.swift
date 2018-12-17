@@ -25,6 +25,7 @@ class QuestionData {
     var questionNo: Int = 0
     
     init(questionSourceDataArray: [String]) {
+        print(questionSourceDataArray)
         question = questionSourceDataArray[0]
         answer1 = questionSourceDataArray[1]
         answer2 = questionSourceDataArray[2]
@@ -73,7 +74,7 @@ class QuestionDataManager {
             // 一行ずつ読み込む
             csvStringData.enumerateLines(invoking: { (line, stop) in
                 // カンマ区切りで分割
-                let questionSourceDataArray = line.components(separatedBy: ",")
+                let questionSourceDataArray = line.components(separatedBy: ", ")
                 // 問題データを格納するオブジェクト作成
                 let questionData = QuestionData(questionSourceDataArray: questionSourceDataArray)
                 // 問題を追加

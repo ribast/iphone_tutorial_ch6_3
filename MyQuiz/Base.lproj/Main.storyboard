@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="525.60000000000002" y="141.67916041979012"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="gjr-nz-XUH">
             <objects>
-                <viewController storyboardIdentifier="result" id="5zc-PN-rQP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="5zc-PN-rQP" customClass="ResultViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qS8-o0-hvo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,6 +204,9 @@
                                 <state key="normal" title="タイトルへ戻る">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bMq-sh-Fl5" kind="unwind" unwindAction="goToTitle:" id="RIO-oo-dan"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,8 +219,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CHf-Pu-P35"/>
                     </view>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="1XG-Oj-mQD" id="WJL-wv-nWD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFy-UG-I5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bMq-sh-Fl5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1272.8" y="141.67916041979012"/>
         </scene>

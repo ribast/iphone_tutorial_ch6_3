@@ -26,6 +26,7 @@ class QuestionViewController: UIViewController {
         
         // 初期データ設定
         questionNoLabel.text = "Q.\(questionData.questionNo)"
+        questionTextView.text = questionData.question
         answer1Button.setTitle(questionData.answer1, for: UIControl.State.normal)
         answer2Button.setTitle(questionData.answer2, for: UIControl.State.normal)
         answer3Button.setTitle(questionData.answer3, for: UIControl.State.normal)
@@ -81,7 +82,7 @@ class QuestionViewController: UIViewController {
     }
     
     // 不正解アニメーション
-    func goNextQuestionWithCIncorrectAnimation() {
+    func goNextQuestionWithIncorrectAnimation() {
         // 正解音
         AudioServicesPlayAlertSound(1006)
         
